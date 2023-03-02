@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login {
 	
-	@FindBy(className="signin-icon")
+	@FindBy(id="signin-popover")
 	WebElement bttn_UserProfile;
 	
-	@FindBy(xpath="//a[@class='modalLink btn btn-primary signin']/..")
+	@FindBy(xpath="//a[@automation-id='sal_signin']/..")
 	WebElement bttn_Signin;
 	
 	@FindBy(id="emailId")
