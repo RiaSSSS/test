@@ -17,6 +17,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.TakesScreenshot;
+import java.time.Duration;
 
 public class LoginSteps {
 
@@ -30,7 +31,7 @@ public class LoginSteps {
 		System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/resources/drivers/chromedriver.exe");
 		driver=new ChromeDriver();
 		//WebDriverWait wait=new WebDriverWait(driver, 20);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
 	}
 	@After
@@ -53,7 +54,9 @@ public class LoginSteps {
 	public void verifyLoginPage()
 	{
 		driver.navigate().to("https://wwwtest.lakeshorelearning.com/");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 	}
 	 
 	@And ("user clicks on login button")
