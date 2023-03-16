@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 glue={"StepDefinations"},
 monochrome=true,
 publish = true,
-//tags="@SmokeTest",
+tags="@RegressionTest",
 //plugin = {"json:target/cucumber.json"}
 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 

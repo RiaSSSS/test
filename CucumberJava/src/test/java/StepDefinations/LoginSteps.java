@@ -18,6 +18,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.TakesScreenshot;
 import java.time.Duration;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginSteps {
 
@@ -54,9 +55,10 @@ public class LoginSteps {
 	public void verifyLoginPage()
 	{
 		driver.navigate().to("https://wwwtest.lakeshorelearning.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		//driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		
 	}
 	 
 	@And ("user clicks on login button")
