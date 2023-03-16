@@ -1,9 +1,13 @@
 package PageFactory;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
 	
@@ -40,8 +44,8 @@ public class Login {
 	}
 	public void enterUserNameAndPassword(String username , String password)
 	{
-		txt_username.sendKeys(username);
-		txt_password.sendKeys(password);
+		sendKeys(driver,txt_username,10,username);
+		sendKeys(driver,txt_password,10,password);
 	}
 	public void clickOnLoginButton() throws InterruptedException
 	{
@@ -58,5 +62,13 @@ public class Login {
 		Thread.sleep(3000);
 		driver.getPageSource().contains("Oops! That email and/or password was not found. Please try again.");
 	}
+	public static void sendKeys(WebDriver driver, WebElement element , int timeout, String value)
+	{
+	   new WebDriverWait(driver, Duration.ofSeconds(timeout)).
+	   until(ExpectedConditions.visibilityOf(element));
+		element.sendKeys(value);
+	}
+
+	
 
 }
