@@ -90,4 +90,16 @@ public class AddToCartSteps {
 		AddToCart = new AddToCart(driver);
 		AddToCart.verifyCheckoutPage();
 	}
+	@And("user click scroll down option")
+	public void verifyScrollDown() throws InterruptedException 
+	{
+		AddToCart = new AddToCart(driver);
+		AddToCart.clickOnScrollBarOption();
+	}
+	@And("user clicks on Quantity drop-downs select a option")
+	public void verifyQuantityDropDown() throws InterruptedException 
+	{
+		AddToCart = new AddToCart(driver);
+		AddToCart.clickOnQuantityDropdown();
+	}
 }
