@@ -17,13 +17,13 @@ public class Login {
 	@FindBy(xpath="//a[@automation-id='sal_signin']/..")
 	WebElement bttn_Signin;
 	
-	@FindBy(id="emailId")
+	@FindBy(name="username")
 	WebElement txt_username;
 	
 	@FindBy(name="password")
 	WebElement txt_password;
 	
-	@FindBy(xpath="//button[@automation-id='login_button']")
+	@FindBy(xpath="//button[text() = 'Submit' ]")
 	WebElement btn_login;
 	
 	WebDriver driver;

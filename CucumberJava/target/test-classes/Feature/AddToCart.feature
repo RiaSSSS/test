@@ -1,6 +1,6 @@
 Feature: To test add to cart functionality
 
-  @SmokeTest
+  
   Scenario: Check add to cart is successful
     Given user is on home page
     And user clicks on the shopall menu option
@@ -10,7 +10,7 @@ Feature: To test add to cart functionality
     And User clicks on checkout button
     Then user navigate to checkout page
 
-  @RegressionTest
+  
   Scenario: Check multiple items add to cart is successful
     Given user is on home page
     And user clicks on the shopall menu option

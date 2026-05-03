@@ -29,7 +29,7 @@ public class LoginSteps {
 	public void browserSetup()
 	{
 		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/resources/drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/resources/drivers/chromedriver");
 		driver=new ChromeDriver();
 		//WebDriverWait wait=new WebDriverWait(driver, 20);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -54,7 +54,7 @@ public class LoginSteps {
 @Given ("user is on login page")
 	public void verifyLoginPage()
 	{
-		driver.navigate().to("https://wwwtest.lakeshorelearning.com/");
+		driver.navigate().to("https://practicetestautomation.com/practice-test-login/");
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));

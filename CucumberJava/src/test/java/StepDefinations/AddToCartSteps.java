@@ -25,7 +25,7 @@ public class AddToCartSteps {
 	@Before
 	public void browserSetup() {
 		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/drivers/chromedriver");
 		driver = new ChromeDriver();
 		// WebDriverWait wait=new WebDriverWait(driver, 20);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
